@@ -7,3 +7,4 @@ C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\
 C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.dll
 C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.pdb
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.csproj.AssemblyReference.cache

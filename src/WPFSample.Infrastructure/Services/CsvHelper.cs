@@ -5,10 +5,10 @@ namespace WPFSample.Infrastructure.Services
 {
     public class CsvHelper : ICsvHelper
     {
-        private List<ContactModel> MockList = new List<ContactModel>
+        private List<ContactData> MockList = new List<ContactData>
         {
             #region MockData
-            new ContactModel
+            new ContactData
             {
                 Id =1,
                 FirstName="James",
@@ -23,7 +23,7 @@ namespace WPFSample.Infrastructure.Services
                 Phone2="504-845-1427",
                 Email="jbutt@gmail.com",
             },
-            new ContactModel
+            new ContactData
             {
                 Id =2,
                 FirstName="Josephine",
@@ -38,7 +38,7 @@ namespace WPFSample.Infrastructure.Services
                 Phone2="810-374-9840",
                 Email="josephine_darakjy@darakjy.org",
             },
-            new ContactModel
+            new ContactData
             {
                 Id =3,
                 FirstName="Art",
@@ -53,7 +53,7 @@ namespace WPFSample.Infrastructure.Services
                 Phone2="856-264-4130",
                 Email="art@venere.org",
             },
-            new ContactModel
+            new ContactData
             {
                 Id =4,
                 FirstName="Lenna",
@@ -68,7 +68,7 @@ namespace WPFSample.Infrastructure.Services
                 Phone2="907-921-2010",
                 Email="lpaprocki@hotmail.com",
             },
-            new ContactModel
+            new ContactData
             {
                 Id =5,
                 FirstName="Donette",
@@ -83,7 +83,7 @@ namespace WPFSample.Infrastructure.Services
                 Phone2="513-549-4561",
                 Email="donette.foller@cox.net",
             },
-            new ContactModel
+            new ContactData
             {
                 Id =6,
                 FirstName="Simona",
@@ -98,7 +98,7 @@ namespace WPFSample.Infrastructure.Services
                 Phone2="419-800-6759",
                 Email="simona@morasca.com",
             },
-            new ContactModel
+            new ContactData
             {
                 Id =7,
                 FirstName="Mitsue",
@@ -113,7 +113,7 @@ namespace WPFSample.Infrastructure.Services
                 Phone2="773-924-8565",
                 Email="mitsue_tollner@yahoo.com",
             },
-            new ContactModel
+            new ContactData
             {
                 Id =8,
                 FirstName="Leota",
@@ -128,7 +128,7 @@ namespace WPFSample.Infrastructure.Services
                 Phone2="408-813-1105",
                 Email="leota@hotmail.com",
             },
-            new ContactModel
+            new ContactData
             {
                 Id =9,
                 FirstName="Sage",
@@ -143,7 +143,7 @@ namespace WPFSample.Infrastructure.Services
                 Phone2="605-794-4895",
                 Email="sage_wieser@cox.net",
             },
-            new ContactModel
+            new ContactData
             {
                 Id =10,
                 FirstName="Kris",
@@ -161,16 +161,16 @@ namespace WPFSample.Infrastructure.Services
         };
         #endregion
 
-        public List<ContactModel> GetContacts()
+        public List<ContactData> GetContacts()
         {
             return MockList;
         }
 
-        public ContactModel ReadContact(int id)
+        public ContactData ReadContact(int id)
         {
             return MockList.FirstOrDefault();
         }
-        public bool UpdateContact(ContactModel contact)
+        public bool UpdateContact(ContactData contact)
         {
             var flag = false;
             for (var i = 0; i < MockList.Count; i++)
@@ -184,7 +184,7 @@ namespace WPFSample.Infrastructure.Services
             return flag;
         }
 
-        public bool DeleteContact(ContactModel contact)
+        public bool DeleteContact(ContactData contact)
         {
             var flag = false;
             for (var i = 0; i < MockList.Count; i++)
@@ -198,7 +198,7 @@ namespace WPFSample.Infrastructure.Services
             return flag;
         }
 
-        public bool CreateContact(ContactModel contact)
+        public bool CreateContact(ContactData contact)
         {
             bool flag = true;
             try

@@ -4,12 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFSample.UI"
-        xmlns:viewModels="clr-namespace:WPFSample.Application.ViewModel;assembly=WPFSample.Application"
+        xmlns:viewModels="clr-namespace:WPFSample.Applicationz.ViewModel;assembly=WPFSample.Applicationz"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="920" MinWidth="920" MinHeight="500">
     <Window.DataContext>
         <viewModels:ContactsViewModel x:Name="ViewModel" />
     </Window.DataContext>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding InitializeDataCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -43,8 +49,21 @@
             <TextBlock Text="Sample" Grid.Row="0" Grid.Column="3"/>
             <TextBlock Text="Sample" Grid.Row="1" Grid.Column="1"/>
             <TextBlock Text="Sample" Grid.Row="1" Grid.Column="3" />
-            <Label Content="Sample" Grid.Row="0" Grid.Column="0" Margin="-300,0,300,0"/>
-            <Button Content="Click" Grid.Row="0" Grid.Column="0" Margin="-177,0,177,0"/>
+            <Button Content="Click" Grid.Row="2" Grid.Column="3" Margin="50,181,50,-181" Command="{Binding LoadContactsCommand}" />
         </Grid>
+        <ItemsControl x:Name="icTodoList" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Contacts}" Margin="0,1,0,0">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,0,0,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding FirstName}" Grid.Column="0"/>
+                        <TextBlock Text="{Binding LastName}" Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </Window>

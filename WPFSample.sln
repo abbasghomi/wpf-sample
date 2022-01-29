@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFSample.Application", "src\WPFSample.Application\WPFSample.Application.csproj", "{B95A8785-B88A-4FD3-8B83-5C337ACC5024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFSample.Applicationz", "src\WPFSample.Applicationz\WPFSample.Applicationz.csproj", "{B95A8785-B88A-4FD3-8B83-5C337ACC5024}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSample.Infrastructure", "src\WPFSample.Infrastructure\WPFSample.Infrastructure.csproj", "{435A32D3-56F4-47FF-ABF6-9118CD236B29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFSample.Infrastructure", "src\WPFSample.Infrastructure\WPFSample.Infrastructure.csproj", "{435A32D3-56F4-47FF-ABF6-9118CD236B29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSample.UI", "src\WPFSample.UI\WPFSample.UI.csproj", "{03E32F9A-2F2A-4421-8D71-2AA82B61E491}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFSample.UI", "src\WPFSample.UI\WPFSample.UI.csproj", "{03E32F9A-2F2A-4421-8D71-2AA82B61E491}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSample.Domain", "src\WPFSample.Domain\WPFSample.Domain.csproj", "{B4EF946C-89B7-46D5-88BD-B42A6E2ABE97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFSample.Domain", "src\WPFSample.Domain\WPFSample.Domain.csproj", "{B4EF946C-89B7-46D5-88BD-B42A6E2ABE97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

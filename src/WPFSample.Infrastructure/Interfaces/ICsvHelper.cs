@@ -4,11 +4,11 @@ namespace WPFSample.Infrastructure.Interfaces
 {
     public interface ICsvHelper
     {
-        List<ContactModel> GetContacts();
-        ContactModel ReadContact(int id);
-        bool UpdateContact(ContactModel contact);
-        bool DeleteContact(ContactModel contact);
-        bool CreateContact(ContactModel contact);
+        List<ContactData> GetContacts();
+        ContactData ReadContact(int id);
+        bool UpdateContact(ContactData contact);
+        bool DeleteContact(ContactData contact);
+        bool CreateContact(ContactData contact);
         int GetNewId();
     }
 }

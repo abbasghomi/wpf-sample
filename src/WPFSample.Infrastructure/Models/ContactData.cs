@@ -2,7 +2,7 @@
 
 namespace WPFSample.Infrastructure.Models
 {
-    public class ContactModel
+    public class ContactData
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
