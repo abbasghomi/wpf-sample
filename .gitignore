@@ -53,20 +53,20 @@ dkms.conf
 
 .vs/
 
-src/WPFSample.UI/WPFSample.UI (Package)/bin/
-
-src/WPFSample.UI/WPFSample.UI (Package)/obj/
-
-src/WPFSample.UI/WPFSample.UI/bin/
-
-src/WPFSample.UI/WPFSample.UI/obj/
-
 packages/
-
-src/WPFSample.Application/bin/
-
-src/WPFSample.Application/obj/
 
 src/WPFSample.UI/bin/
 
 src/WPFSample.UI/obj/
+
+src/WPFSample.Applicationz/bin/
+
+src/WPFSample.Applicationz/obj/
+
+src/WPFSample.Infrastructure/bin/
+
+src/WPFSample.Infrastructure/obj/
+
+src/WPFSample.Domain/bin/
+
+src/WPFSample.Domain/obj/

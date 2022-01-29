@@ -7,7 +7,15 @@
         xmlns:viewModels="clr-namespace:WPFSample.Applicationz.ViewModel;assembly=WPFSample.Applicationz"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="920" MinWidth="920" MinHeight="500">
+        Title="MainWindow" Height="500" Width="920" MinWidth="920" MinHeight="500"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
     <Window.DataContext>
         <viewModels:ContactsViewModel x:Name="ViewModel" />
     </Window.DataContext>
@@ -23,12 +31,12 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="326"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="Beige" />
-        <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Content="Contact Book" FontSize="24" FontWeight="Bold"/>
-        <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" Content="Detail" FontSize="14" FontWeight="Bold"/>
+        <Label Grid.Column="0" VerticalAlignment="Center" Content="Contact Book" FontSize="24" FontWeight="Bold" Height="36"/>
+        <Label Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" Content="Detail" FontSize="14" FontWeight="Bold" Height="24"/>
         <Grid Grid.Row="1" Grid.Column="1" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
@@ -50,6 +58,7 @@
             <TextBlock Text="Sample" Grid.Row="1" Grid.Column="1"/>
             <TextBlock Text="Sample" Grid.Row="1" Grid.Column="3" />
             <Button Content="Click" Grid.Row="2" Grid.Column="3" Margin="50,181,50,-181" Command="{Binding LoadContactsCommand}" />
+
         </Grid>
         <ItemsControl x:Name="icTodoList" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Contacts}" Margin="0,1,0,0">
             <ItemsControl.ItemTemplate>
