@@ -1,0 +1,9 @@
+C:\Qprojects\winui-sample\src\WPFSample.Domain\bin\Debug\netstandard2.1\WPFSample.Domain.deps.json
+C:\Qprojects\winui-sample\src\WPFSample.Domain\bin\Debug\netstandard2.1\WPFSample.Domain.dll
+C:\Qprojects\winui-sample\src\WPFSample.Domain\bin\Debug\netstandard2.1\WPFSample.Domain.pdb
+C:\Qprojects\winui-sample\src\WPFSample.Domain\obj\Debug\netstandard2.1\WPFSample.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Qprojects\winui-sample\src\WPFSample.Domain\obj\Debug\netstandard2.1\WPFSample.Domain.AssemblyInfoInputs.cache
+C:\Qprojects\winui-sample\src\WPFSample.Domain\obj\Debug\netstandard2.1\WPFSample.Domain.AssemblyInfo.cs
+C:\Qprojects\winui-sample\src\WPFSample.Domain\obj\Debug\netstandard2.1\WPFSample.Domain.csproj.CoreCompileInputs.cache
+C:\Qprojects\winui-sample\src\WPFSample.Domain\obj\Debug\netstandard2.1\WPFSample.Domain.dll
+C:\Qprojects\winui-sample\src\WPFSample.Domain\obj\Debug\netstandard2.1\WPFSample.Domain.pdb

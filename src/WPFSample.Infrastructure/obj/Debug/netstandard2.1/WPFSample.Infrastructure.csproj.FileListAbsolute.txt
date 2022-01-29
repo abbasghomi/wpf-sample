@@ -1,0 +1,9 @@
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\bin\Debug\netstandard2.1\WPFSample.Infrastructure.deps.json
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\bin\Debug\netstandard2.1\WPFSample.Infrastructure.dll
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\bin\Debug\netstandard2.1\WPFSample.Infrastructure.pdb
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.AssemblyInfoInputs.cache
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.AssemblyInfo.cs
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.dll
+C:\Qprojects\winui-sample\src\WPFSample.Infrastructure\obj\Debug\netstandard2.1\WPFSample.Infrastructure.pdb

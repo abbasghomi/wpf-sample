@@ -1,0 +1,50 @@
+﻿<Window x:Class="WPFSample.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFSample.UI"
+        xmlns:viewModels="clr-namespace:WPFSample.Application.ViewModel;assembly=WPFSample.Application"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="920" MinWidth="920" MinHeight="500">
+    <Window.DataContext>
+        <viewModels:ContactsViewModel x:Name="ViewModel" />
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="Beige" />
+        <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Content="Contact Book" FontSize="24" FontWeight="Bold"/>
+        <Label Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" Content="Detail" FontSize="14" FontWeight="Bold"/>
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Sample" Grid.Row="0" Grid.Column="0"/>
+            <Label Content="Sample" Grid.Row="0" Grid.Column="2"/>
+            <Label Content="Sample" Grid.Row="1" Grid.Column="2"/>
+            <Label Content="Sample" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Text="Sample" Grid.Row="0" Grid.Column="1"/>
+            <TextBlock Text="Sample" Grid.Row="0" Grid.Column="3"/>
+            <TextBlock Text="Sample" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Text="Sample" Grid.Row="1" Grid.Column="3" />
+            <Label Content="Sample" Grid.Row="0" Grid.Column="0" Margin="-300,0,300,0"/>
+            <Button Content="Click" Grid.Row="0" Grid.Column="0" Margin="-177,0,177,0"/>
+        </Grid>
+    </Grid>
+</Window>
