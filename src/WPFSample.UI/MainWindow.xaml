@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFSample.UI"
+        xmlns:converters="clr-namespace:WPFSample.UI.Converters"
         xmlns:viewModels="clr-namespace:WPFSample.Applicationz.ViewModel;assembly=WPFSample.Applicationz"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
@@ -19,6 +20,9 @@
     <Window.DataContext>
         <viewModels:ContactsViewModel x:Name="ViewModel" />
     </Window.DataContext>
+    <Window.Resources>
+        <converters:StringToPhoneConverter x:Key="StringToPhoneConverterKey" />
+    </Window.Resources>
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <i:InvokeCommandAction Command="{Binding InitializeDataCommand}" />
@@ -50,17 +54,17 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBox materialDesign:HintAssist.Hint="FirstName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.FirstName}" Grid.Row="0" VerticalAlignment="Top" Height="36"  Margin="5,5,6,0" Grid.RowSpan="2" />
-            <TextBox materialDesign:HintAssist.Hint="LastName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.LastName}" Grid.Row="0" VerticalAlignment="Top" Height="36" Grid.Column="1"  Margin="4,5,5,0" Grid.RowSpan="2" />
-            <TextBox materialDesign:HintAssist.Hint="CompanyName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.CompanyName}" Grid.Row="0" VerticalAlignment="Top" Height="36" Grid.Column="2"  Margin="5,5,4,0" Grid.RowSpan="2" />
-            <TextBox materialDesign:HintAssist.Hint="Address" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Address}" Grid.Row="0" VerticalAlignment="Top" Height="36" Grid.Column="3"  Margin="6,5,5,0" Grid.RowSpan="2" />
-            <TextBox materialDesign:HintAssist.Hint="Country" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Country}" Grid.Row="1" VerticalAlignment="Top" Height="36"  Margin="5,5,6,0" Grid.RowSpan="2" />
-            <TextBox materialDesign:HintAssist.Hint="State" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.State}" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="1" Margin="4,5,5,0" Grid.RowSpan="2"  />
-            <TextBox materialDesign:HintAssist.Hint="City" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.City}" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="2" Margin="5,5,4,0" Grid.RowSpan="2"  />
-            <TextBox materialDesign:HintAssist.Hint="Zip" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Zip}" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="3"  Margin="6,5,5,0" Grid.RowSpan="2" />
-            <TextBox materialDesign:HintAssist.Hint="Phone1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Phone1}" Grid.Row="2" VerticalAlignment="Top" Height="36"  Margin="5,5,6,0" Grid.RowSpan="2" />
-            <TextBox materialDesign:HintAssist.Hint="Phone" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Phone}" Grid.Row="2" VerticalAlignment="Top" Height="36" Grid.Column="1" Margin="4,5,5,0" Grid.RowSpan="2" />
-            <TextBox materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Email}" Grid.Row="2" VerticalAlignment="Top" Height="36" Grid.Column="2" Margin="5,5,4,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="FirstName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.FirstName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" VerticalAlignment="Top" Height="36"  Margin="5,5,6,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="LastName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.LastName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" VerticalAlignment="Top" Height="36" Grid.Column="1"  Margin="4,5,5,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="CompanyName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.CompanyName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" VerticalAlignment="Top" Height="36" Grid.Column="2"  Margin="5,5,4,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Address" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Address, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" VerticalAlignment="Top" Height="36" Grid.Column="3"  Margin="6,5,5,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Country" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Country, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" VerticalAlignment="Top" Height="36"  Margin="5,5,6,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="State" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.State, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="1" Margin="4,5,5,0" Grid.RowSpan="2"  />
+            <TextBox materialDesign:HintAssist.Hint="City" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.City, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="2" Margin="5,5,4,0" Grid.RowSpan="2"  />
+            <TextBox materialDesign:HintAssist.Hint="Zip" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Zip, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="3"  Margin="6,5,5,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Phone1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Phone1, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverterKey}}" MaxLength="12" Grid.Row="2" VerticalAlignment="Top" Height="36"  Margin="5,5,6,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Phone" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Phone, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverterKey}}" MaxLength="12" Grid.Row="2" VerticalAlignment="Top" Height="36" Grid.Column="1" Margin="4,5,5,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Email, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" VerticalAlignment="Top" Height="36" Grid.Column="2" Margin="5,5,4,0" Grid.RowSpan="2" />
             <Button Content="{Binding SaveButtonText}" IsEnabled="{Binding IsSaveButtonEnabled}" Grid.Row="2" Grid.Column="3" Margin="6,5,5,2" Command="{Binding SaveContactCommand}" />
             <Button Content="Cancel" Grid.Row="3" Grid.Column="3" Margin="6,3,5,-34" Command="{Binding CancelSaveContactCommand}" />
         </Grid>
