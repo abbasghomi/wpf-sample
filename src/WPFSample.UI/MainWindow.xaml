@@ -7,7 +7,7 @@
         xmlns:viewModels="clr-namespace:WPFSample.Applicationz.ViewModel;assembly=WPFSample.Applicationz"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="920" MinWidth="920" MinHeight="500"
+        Title="MainWindow" Height="500" Width="1000" MinWidth="920" MinHeight="500"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -31,7 +31,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="326"/>
+            <ColumnDefinition Width="450"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="Beige" />
@@ -41,38 +41,62 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="39.04"/>
+                <RowDefinition Height="0.96"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Content="Sample" Grid.Row="0" Grid.Column="0"/>
-            <Label Content="Sample" Grid.Row="0" Grid.Column="2"/>
-            <Label Content="Sample" Grid.Row="1" Grid.Column="2"/>
-            <Label Content="Sample" Grid.Row="1" Grid.Column="0"/>
-            <TextBlock Text="Sample" Grid.Row="0" Grid.Column="1"/>
-            <TextBlock Text="Sample" Grid.Row="0" Grid.Column="3"/>
-            <TextBlock Text="Sample" Grid.Row="1" Grid.Column="1"/>
-            <TextBlock Text="Sample" Grid.Row="1" Grid.Column="3" />
-            <Button Content="Click" Grid.Row="2" Grid.Column="3" Margin="50,181,50,-181" Command="{Binding LoadContactsCommand}" />
-
+            <TextBox materialDesign:HintAssist.Hint="FirstName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.FirstName}" Grid.Row="0" VerticalAlignment="Top" Height="36"  Margin="5,5,6,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="LastName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.LastName}" Grid.Row="0" VerticalAlignment="Top" Height="36" Grid.Column="1"  Margin="4,5,5,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="CompanyName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.CompanyName}" Grid.Row="0" VerticalAlignment="Top" Height="36" Grid.Column="2"  Margin="5,5,4,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Address" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Address}" Grid.Row="0" VerticalAlignment="Top" Height="36" Grid.Column="3"  Margin="6,5,5,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Country" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Country}" Grid.Row="1" VerticalAlignment="Top" Height="36"  Margin="5,5,6,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="State" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.State}" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="1" Margin="4,5,5,0" Grid.RowSpan="2"  />
+            <TextBox materialDesign:HintAssist.Hint="City" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.City}" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="2" Margin="5,5,4,0" Grid.RowSpan="2"  />
+            <TextBox materialDesign:HintAssist.Hint="Zip" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Zip}" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="3"  Margin="6,5,5,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Phone1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Phone1}" Grid.Row="2" VerticalAlignment="Top" Height="36"  Margin="5,5,6,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Phone2" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Phone2}" Grid.Row="2" VerticalAlignment="Top" Height="36" Grid.Column="1" Margin="4,5,5,0" Grid.RowSpan="2" />
+            <TextBox materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="{Binding ContactToUpdate.Email}" Grid.Row="2" VerticalAlignment="Top" Height="36" Grid.Column="2" Margin="5,5,4,0" Grid.RowSpan="2" />
+            <Button Content="{Binding SaveButtonText}" IsEnabled="{Binding IsSaveButtonEnabled}" Grid.Row="2" Grid.Column="3" Margin="6,5,5,2" Command="{Binding SaveContactCommand}" />
+            <Button Content="Cancel" Grid.Row="3" Grid.Column="3" Margin="6,3,5,-34" Command="{Binding CancelSaveContactCommand}" />
         </Grid>
-        <ItemsControl x:Name="icTodoList" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Contacts}" Margin="0,1,0,0">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Grid Margin="0,0,0,5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100" />
-                            <ColumnDefinition Width="100" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding FirstName}" Grid.Column="0"/>
-                        <TextBlock Text="{Binding LastName}" Grid.Column="1"/>
-                    </Grid>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        <ListView Grid.Row="1" Grid.Column="0" x:Name="ContactsList"
+              SelectedItem="{Binding SelectedContact}"
+              ItemsSource="{Binding Contacts}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <materialDesign:PackIcon Kind="{Binding Starred}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                        
+                    </GridViewColumn>
+                    <GridViewColumn
+                DisplayMemberBinding="{Binding FirstName}"
+                Header="Firstname" />
+                    <GridViewColumn
+                DisplayMemberBinding="{Binding LastName}"
+                Header="Lastname" />
+                    <GridViewColumn Header="Option">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button
+                                  Style="{StaticResource MaterialDesignPaperLightButton}"
+                                  Width="80"
+                                  Content="Delete"
+                                   Command="{Binding RelativeSource={RelativeSource AncestorType=ListView}, Path=DataContext.DeleteContactCommand}"
+                                   CommandParameter="{Binding Id}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

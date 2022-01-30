@@ -46,7 +46,7 @@ namespace WPFSample.Infrastructure.Services
                 CompanyName="Chemel, James L Cpa",
                 Address="8 W Cerritos Ave #54",
                 Country="Gloucester",
-                State ="NJ",
+                State ="TX",
                 City ="Bridgeport",
                 Zip="8014",
                 Phone1="856-636-8749",
@@ -106,7 +106,7 @@ namespace WPFSample.Infrastructure.Services
                 CompanyName="Morlong Associates",
                 Address="7 Eads St",
                 Country="Cook",
-                State ="IL",
+                State ="TX",
                 City ="Chicago",
                 Zip="60632",
                 Phone1="773-573-6914",
@@ -197,7 +197,20 @@ namespace WPFSample.Infrastructure.Services
             }
             return flag;
         }
-
+        public bool DeleteContactById(int id)
+        {
+            var flag = false;
+            for (var i = 0; i < MockList.Count; i++)
+            {
+                if (MockList[i].Id == id)
+                {
+                    MockList.Remove(MockList[i]);
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+        
         public bool CreateContact(ContactData contact)
         {
             bool flag = true;
