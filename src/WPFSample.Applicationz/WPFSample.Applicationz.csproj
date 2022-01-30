@@ -14,7 +14,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\WPFSample.Domain\WPFSample.Domain.csproj" />
 	  <ProjectReference Include="..\WPFSample.Infrastructure\WPFSample.Infrastructure.csproj" />
 	</ItemGroup>
 
