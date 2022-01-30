@@ -18,7 +18,7 @@ namespace WPFSample.Applicationz.ViewModel
             Update
         };
 
-        private readonly ICsvHelper CsvHelper = Ioc.Default.GetRequiredService<ICsvHelper>();
+        private readonly ICsvHelperService CsvHelper = Ioc.Default.GetRequiredService<ICsvHelperService>();
 
         #region properties
         private SaveType saveType = SaveType.Create;

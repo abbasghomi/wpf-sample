@@ -17,7 +17,7 @@ namespace WPFSample.Applicationz.Models
         private string city;
         private string zip;
         private string phone1;
-        private string phone2;
+        private string phone;
         private string email;
         private string starred;
 
@@ -32,7 +32,7 @@ namespace WPFSample.Applicationz.Models
 
             this.id = value.Id;
             this.email = value.email;
-            this.phone2 = value.phone2;
+            this.phone = value.phone;
             this.phone1 = value.phone1;
             this.zip = value.zip;
             this.city = value.city;
@@ -137,12 +137,12 @@ namespace WPFSample.Applicationz.Models
             Messenger.Send(new ValidityChangedMessage(AreFieldsFilled));
         }
 
-        public string Phone2 { get => phone2; set => UpdatePhone2(value); }
+        public string Phone { get => phone; set => UpdatePhone(value); }
 
-        private void UpdatePhone2(string value)
+        private void UpdatePhone(string value)
         {
-            phone2 = value;
-            OnPropertyChanged(nameof(Phone2));
+            phone = value;
+            OnPropertyChanged(nameof(Phone));
             Messenger.Send(new ValidityChangedMessage(AreFieldsFilled));
         }
 

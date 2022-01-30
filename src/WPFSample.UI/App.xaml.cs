@@ -13,8 +13,8 @@ namespace WPFSample.UI
             Ioc.Default.ConfigureServices(
                         new ServiceCollection()
                         .AddSingleton<MainWindow>()
-                        .AddSingleton<ICsvHelper, CsvHelper>()
-                        .BuildServiceProvider());
+                        .AddSingleton<ICsvHelperService, CsvHelperService>()
+                        .BuildServiceProvider()); ;
         }
 
         private void OnStartup(object sender, StartupEventArgs e)

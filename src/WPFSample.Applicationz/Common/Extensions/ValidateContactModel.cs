@@ -15,7 +15,7 @@ namespace WPFSample.Applicationz.Common.Extensions
                 string.IsNullOrEmpty(contact.City) ||
                 string.IsNullOrEmpty(contact.Zip) ||
                 string.IsNullOrEmpty(contact.Phone1) ||
-                string.IsNullOrEmpty(contact.Phone2) ||
+                string.IsNullOrEmpty(contact.Phone) ||
                 string.IsNullOrEmpty(contact.Email))
             {
                 return false;

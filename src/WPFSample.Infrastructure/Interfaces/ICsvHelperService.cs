@@ -2,7 +2,7 @@
 
 namespace WPFSample.Infrastructure.Interfaces
 {
-    public interface ICsvHelper
+    public interface ICsvHelperService
     {
         List<ContactData> GetContacts();
         ContactData ReadContact(int id);
