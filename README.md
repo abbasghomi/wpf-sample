@@ -35,3 +35,7 @@ Utilizing modern framework to create outstanding desktop application
 #### Remaining:
 
 - Field Validation
+- Automated Testing
+  - Behavior testing
+  - Unit Testing
+  - UI Testing
