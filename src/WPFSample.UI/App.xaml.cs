@@ -14,7 +14,7 @@ namespace WPFSample.UI
                         new ServiceCollection()
                         .AddSingleton<MainWindow>()
                         .AddSingleton<ICsvHelperService, CsvHelperService>()
-                        .BuildServiceProvider()); ;
+                        .BuildServiceProvider());
         }
 
         private void OnStartup(object sender, StartupEventArgs e)
