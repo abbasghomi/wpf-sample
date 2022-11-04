@@ -27,7 +27,7 @@ Utilizing modern framework to create outstanding desktop application
 #### Project Architecture:
 
 - UI: presentation layer
-- Applicationz: Business logics (Vecause of ambiguity of namespaces Application layer name changed to Applicationz)
+- Applicationz: Business logics (Because of ambiguity of namespaces Application layer name changed to Applicationz)
 - Infrastructure: communicating with outer resources
 
 
